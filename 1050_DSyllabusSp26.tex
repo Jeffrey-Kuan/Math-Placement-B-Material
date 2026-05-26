@@ -1,0 +1,454 @@
+\documentclass{ximera}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+
+\title{Math 1050 \\
+ Spring 2026 }
+
+\author{}
+\date{}
+
+
+%New command to display footnote whose markers will always be hidden
+\let\svthefootnote\thefootnote
+\newcommand\blfootnotetext[1]{%
+  \let\thefootnote\relax\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \let\thefootnote\svthefootnote%
+}
+
+%Overriding the \footnotetext command to hide the marker if its value is `0`
+\let\svfootnotetext\footnotetext
+\renewcommand\footnotetext[2][?]{%
+  \if\relax#1\relax%
+    \ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+  \else%
+    \if?#1\ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+    \else\svfootnotetext[#1]{#2}\fi%
+  \fi
+}
+
+\begin{document}
+Textbook: Beginning Algebra, 8th edition - custom OSU edition; Aufmann and Lockwood.\\
+Required Calculator: TI-30X IIS, TI-30+ SOLAR, TI-30 STAT, TI-31, TI-32, TI-35, TI-50-2, Sharp EL520, Casio 82, Casio 300, or equivalent scientific calculator. Programmable calculators are not allowed in Math 1050! If you have questions about what calculators may be used, ask your instructor.
+
+Midterms: Midterms are held in evenings from 6:30-8:00 p.m., as follows:
+
+\begin{center}
+\begin{tabular}{ll}
+Midterm I & Wednesday, Feb. 11 ( $1.1-1.5$, App. 1, 2.1-2.3, 3.1-3.4) \\
+Midterm II & Wednesday, Mar. 11 ( $4.1-4.7$, App. 2, 5.1-5.2) \\
+Midterm III & Monday, Apr. $13(5.3-5.4,5.6,6.1-6.4,7.1-7.5)$ \\
+\end{tabular}
+\end{center}
+
+Make-up Exams: You must have written permission from your Instructor and your OSU ID in order to take the make-up exams. Midterm make-ups are usually scheduled on the morning following each midterm. See instructor for make-up arrangements.
+
+Final Exam: The final examination is tentatively scheduled for Wednesday, Apr. 29, 8:00-9:45 p.m. The final exam make-up is tentatively scheduled for Thursday, Apr. 30. The final is cumulative: it will cover material from the three midterms as well as sections 8.1-8.6.
+
+Exam Rooms: Exams will not be held in your regular classroom. You must take the exam in the room assigned to your instructor. Exams taken in the wrong room will not be counted. Exam rooms will be announced in class.
+
+Course Schedule: The sections of the text to be covered each day are listed on the calendar (next page), along with the assignments for each section.
+
+Tutor Room: Math 1050 in Cockins Hall (CH) 004. Tutors will be present beginning the second week of the semester, tentatively from 10:20 a.m. through 6:30 p.m. Monday through Thursday. Additionally, tutoring hours are also Sundays and Fridays, 1:00 p.m. through 4:00 p.m. in Math Building (MA) 010. There will be no tutoring during finals week. There is also a series of DVDs in coordination with the text available for viewing. See Angel Fields in CH 146 for these resources.
+
+Grades: Final grades will be based on the cut-off scores indicated below. Each midterm is worth 100 points, the final exam is worth 200 points, and the quizzes and homework contribute 50 points. Instructors may count attendance in these 50 points! There are 550 points in total.\\
+A: 490\\
+B: 440\\
+C: 385\\
+D: 341
+
+Disability Services Statement: If students anticipate or experience academic barriers based on a disability (including mental health and medical conditions, whether chronic or temporary), they should let their instructor know immediately so that they can privately discuss options. Students do not need to disclose specific information about a disability to faculty. To establish reasonable accommodations, students may be asked to register with Student Life Disability Services. Student Life Disabilities Services (SLDS) contact information is: \href{mailto:SLDS@osu.edu}{SLDS@osu.edu}; 614-292-3307; 098 Baker Hall, 113 W. $12{ }^{\text {th }}$ Avenue. Students with disabilities that have been certified by Student Life Disabilities Services (SLDS) will be appropriately accommodated and should inform the instructor as soon as possible of their needs.
+
+If students are ill and need to miss class, including if they are staying home and away from others while experiencing symptoms of viral infection or fever, they should let their instructor know immediately. In cases where illness interacts with an underlying medical condition, please consult with Student Life Disability Services to request reasonable accommodations.
+
+Academic Misconduct: The Ohio State University's Code of Student Conduct (Section 3335-23-04) defines academic misconduct as: Any activity that tends to compromise the academic integrity of the University or subvert the educational process. Examples of academic misconduct include (but are not limited to) plagiarism, collusion (unauthorized collaboration), copying the work of another student, and possession of unauthorized materials during an examination. Ignorance of the University's Code of Student Conduct is never considered an excuse for academic misconduct, so please review the Code of Student Conduct and, specifically, the sections dealing with academic misconduct.
+
+If an instructor suspects that a student has committed academic misconduct in this course, the instructor is obligated by University Rules to report those suspicions to the Committee on Academic Misconduct. If COAM determines that a student violated the University's Code of Student Conduct (i.e., committed academic misconduct), the sanctions for the misconduct could include a failing grade in the course and suspension or dismissal from the University. If students have questions about the above policy or what constitutes academic misconduct in this course, they should contact the instructor.
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Monday & Tuesday & Wednesday & Thursday & Friday \\
+\hline
+\begin{tabular}{l}
+January 12 \\
+1.1 (obj. 1) \\
+First day of classes \\
+\end{tabular} & \begin{tabular}{l}
+13 \\
+1.1 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+14 \\
+1.2 (obj. 1-2) \\
+\end{tabular} & \begin{tabular}{l}
+15 \\
+1.2 (obj. 3-4) \\
+\end{tabular} & \begin{tabular}{l}
+16 \\
+1.2 (obj. 5) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+19 \\
+Martin Luther King Day, No Classes \\
+\end{tabular} & \begin{tabular}{l}
+20 \\
+1.3 (obj. 1-2) \\
+\end{tabular} & \begin{tabular}{l}
+21 \\
+1.3 (obj. 3) \\
+App. 1 \\
+\end{tabular} & \begin{tabular}{l}
+22 \\
+1.3 (obj. 4) \\
+\end{tabular} & \begin{tabular}{l}
+23 \\
+1.4 \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+26 \\
+1.5 (obj. 1-2) \\
+\end{tabular} & \begin{tabular}{l}
+27 \\
+1.5 (obj. 3) \\
+\end{tabular} & \begin{tabular}{l}
+28 \\
+2.1 \\
+\end{tabular} & \begin{tabular}{l}
+29 \\
+2.2 (obj. 1-3) \\
+\end{tabular} & \begin{tabular}{l}
+30 \\
+2.2 (obj. 4-5) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+February 2 \\
+2.3 \\
+\end{tabular} & \begin{tabular}{l}
+3 \\
+3.1 \\
+\end{tabular} & \begin{tabular}{l}
+4 \\
+3.2 \\
+\end{tabular} & \begin{tabular}{l}
+5 \\
+3.3 (obj. 1-2) \\
+\end{tabular} & \begin{tabular}{l}
+6 \\
+3.3 (obj. 3-4) \\
+Last day to drop w/o W \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+9 \\
+3.4 \\
+\end{tabular} & \begin{tabular}{l}
+10 \\
+Review \\
+\end{tabular} & \begin{tabular}{l}
+11 Review \\
+Midterm \#1 \\
+\end{tabular} & \begin{tabular}{l}
+12 \\
+4.1 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+13 \\
+4.1 (obj. 2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+16 \\
+App. 2 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+17 \\
+App. 2 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+18 \\
+4.2(obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+19 \\
+4.2 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+20 \\
+4.2 (obj. 3) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+23 \\
+4.3 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+24 \\
+4.3 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+25 \\
+4.4 \\
+\end{tabular} & \begin{tabular}{l}
+26 \\
+4.5 (obj.1) \\
+\end{tabular} & \begin{tabular}{l}
+27 \\
+4.5 (obj. 2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+March 2 \\
+4.6 \\
+\end{tabular} & \begin{tabular}{l}
+3 \\
+4.7 \\
+\end{tabular} & \begin{tabular}{l}
+4 \\
+5.1 (obj. 1-2) \\
+\end{tabular} & \begin{tabular}{l}
+5 \\
+5.1 (obj. 3) \\
+\end{tabular} & \begin{tabular}{l}
+6 \\
+5.2 (obj. 1-2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+9 \\
+5.2 (obj. 3) \\
+\end{tabular} & \begin{tabular}{l}
+10 \\
+Review \\
+\end{tabular} & \begin{tabular}{l}
+11 Review \\
+Midterm \#2 \\
+\end{tabular} & \begin{tabular}{l}
+12 \\
+5.3 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+13 \\
+5.3 (obj. 2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+16 \\
+Spring Break \\
+No classes \\
+\end{tabular} & \begin{tabular}{l}
+17 \\
+Spring Break No classes \\
+\end{tabular} & \begin{tabular}{l}
+18 \\
+Spring Break No classes \\
+\end{tabular} & \begin{tabular}{l}
+19 \\
+Spring Break No classes \\
+\end{tabular} & \begin{tabular}{l}
+20 \\
+Spring Break No classes \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+23 \\
+5.4 \\
+\end{tabular} & \begin{tabular}{l}
+24 \\
+5.6 \\
+\end{tabular} & \begin{tabular}{l}
+25 \\
+6.1 \\
+\end{tabular} & \begin{tabular}{l}
+26 \\
+6.2 \\
+\end{tabular} & \begin{tabular}{l}
+27 \\
+6.3 \\
+Last day, drop with W \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+30 \\
+6.4 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+31 \\
+6.4 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+April 1 \\
+7.1 \\
+\end{tabular} & \begin{tabular}{l}
+2 \\
+7.2 \\
+\end{tabular} & \begin{tabular}{l}
+3 \\
+7.3 (obj. 1-2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+6 \\
+7.3 (obj. 3-4) \\
+\end{tabular} & \begin{tabular}{l}
+7 \\
+7.3 (obj. 5) \\
+\end{tabular} & \begin{tabular}{l}
+8 \\
+7.4 \\
+\end{tabular} & \begin{tabular}{l}
+9 \\
+7.5 \\
+\end{tabular} & \begin{tabular}{l}
+10 \\
+Review \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+13 Review \\
+Midterm \#3 \\
+\end{tabular} & \begin{tabular}{l}
+14 \\
+8.1 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+15 \\
+8.1 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+16 \\
+8.2 \\
+\end{tabular} & \begin{tabular}{l}
+17 \\
+8.3 (obj. 1) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+20 \\
+8.3 (obj. 2) \\
+\end{tabular} & \begin{tabular}{l}
+21 \\
+8.4 \\
+\end{tabular} & \begin{tabular}{l}
+22 \\
+8.5 \\
+\end{tabular} & \begin{tabular}{l}
+23 \\
+8.6 (obj. 1) \\
+\end{tabular} & \begin{tabular}{l}
+24 \\
+8.6 (obj. 2) \\
+\end{tabular} \\
+\hline
+\begin{tabular}{l}
+27 \\
+Review \\
+\end{tabular} & \begin{tabular}{l}
+28 \\
+Reading Day No classes \\
+\end{tabular} & \begin{tabular}{l}
+29 \\
+1050 FINAL EXAM \\
+\end{tabular} & 30 & May 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+Math 1050, Spring 2026
+
+\section*{Beginning Algebra (OSU custom version), (8th Ed.) Aufmann, Lockwood}
+This is a minimal set of exercises; you should try to do more than this! (For example, use "Chapter Review Exercises", at the end of each chapter, for this purpose.)
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+1.1 & $1,2,6,11,13,17,21,23,31,33,35,61,63,65,67,69,71,73,93,94,95,96,97,104$. \\
+\hline
+1.2 & $13-31$ odd, $37-55$ odd, $63-87$ odd, 91 , 93 , $95-100$, $121-131$ odd, $143,145,153$, 155(*). \\
+\hline
+1.3 & $1-33$ odd, $37-47$ odd, $63-87$ odd, $107-163$ every other odd. \\
+\hline
+App. 1 & all. \\
+\hline
+1.4 & 1-61 odd. \\
+\hline
+1.5 & 1-61 every other odd, 65, 72, 73, 74, 75. \\
+\hline
+2.1 & 9-49 every other odd, 80, 81. \\
+\hline
+2.2 & 33-113 every other odd, 117-145 every other odd, 151-167 odd, 177. \\
+\hline
+2.3 & 1-105 every other odd. \\
+\hline
+3.1 & $1,9-27$ odd, $33-75$ odd, $83-121$ odd. \\
+\hline
+3.2 & 7-83 odd. \\
+\hline
+3.3 & 9, 13-79 every other odd, $89-129$ every other odd, 137, $141-161$ odd, 177, 178, 183, 184. \\
+\hline
+3.4 & 29-53 every other odd, 61-93 every other odd, 103-131 every other odd. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{EXAM \#1}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+4.1 & 3, 4, 5, 9-31 odd, 37-49, odd, 67, 68, 69, 72, 73. \\
+\hline
+App. 2 & 3-17, 27, 28, $29-45$ odd, 47, 48, 52(*). \\
+\hline
+4.2 & $15-27$ odd, $31-47$ odd, 53, 55, 59, 61, 65-81 odd. \\
+\hline
+4.3 & $11-21$ odd, $31-41$ odd, 45-51 odd. \\
+\hline
+4.4 & 11-24. \\
+\hline
+4.5 & 15-27 odd, 31, 41-55 odd, 59, 63, 65, 66, 67. \\
+\hline
+4.6 & $5-21$ odd, $23-33$ odd. \\
+\hline
+4.7 & 10, 11, 12, 14, $15-31$ odd. \\
+\hline
+5.1 & $1,3,5,6,11-19$ odd, 25, 33, 34, 37, 39, 40. \\
+\hline
+5.2 & 3, 8, 9, 13-29 odd, 35-51odd, 63, 64, 65-109 every other odd. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{EXAM \#2}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+5.3 & 5, 7, $13-35$ odd, 41, 43, 47, 53, 55, 63-79 odd, 87. \\
+\hline
+5.4 & 1 , 3, 11-23 odd, 29-41 odd, 47-69 odd, 73, 75. \\
+\hline
+5.6 & $1,3,9-25$ odd, 29, 31, 33, 35. \\
+\hline
+6.1 & $7-15$ odd, $19-23$ odd, $25-53$ odd. \\
+\hline
+6.2 & 7-51 every other odd, 57, 61. \\
+\hline
+6.3 & 7-43 every other odd, 47, 49. \\
+\hline
+6.4 & $9-21$ odd, 25, 26, 29, 31, 39, 40, 41, 42, 43. \\
+\hline
+7.1 & $1-9,13-33$ odd, $39-57$ odd, 61, 63, 65, 67(*) \\
+\hline
+7.2 & $9-37$ odd, $43-79$ odd, $81-89$ odd, 95. \\
+\hline
+7.3 & $13-41$ odd, 45-59 odd, $67-99$ every other odd, $107-123$ odd, 133, 137, 139. \\
+\hline
+7.4 & 11-83 every other odd, 88-91, 95-109, 111-119, 121-127, 131. \\
+\hline
+7.5 & $9-31$ odd, $35-53$ odd. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{EXAM \#3}
+8.1 1, 2, 11-67 every other odd, 75-111 every other odd.\\
+$8.22,3,13-51$ odd, $57-97$ every other odd, 103, 105.\\
+8.3 11-63 every other odd, 71-115 every other odd, 121, 123, 125.\\
+$8.413-49$ odd, 55-61 odd.\\
+$8.57-73$ every other odd, 77, 79.\\
+$8.61,2,11-55$ every other odd, 65-81 odd.
+
+\footnotetext{(*) problems are somewhat more difficult.
+}
+\end{document}

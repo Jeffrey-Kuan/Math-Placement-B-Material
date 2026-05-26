@@ -1,0 +1,260 @@
+\documentclass{ximera}
+
+\DeclareUnicodeCharacter{2713}{\ifmmode\checkmark\else{$\checkmark$}\fi}
+
+\begin{document}
+\section*{Adding fractions using Least Common Denominators (LCD)}
+\section*{I) Common denominators}
+Five gallons and two tablespoons make what? What about subtracting 3 volts from 7 amperes?
+
+Adding or subtracting amounts of different units (where "unit" can be: 1 inch, 1 meter, 1 gallon, 1 tablespoon, 1 volt or 1 ampere) is not always meaningful; in actuality it can be even downright absurd. In the examples above, you can say that five gallons and two tablespoons are seven volume units (better yet: "some volume"); subtracting 3 volts from 7 amperes could be 4 "things" (but actually it's nothing meaningful at all!) As you can see, you can still add or subtract the numbers, but the units are lost, become vague.
+
+However, sometimes you can find common ground. For example, let's find out what is 10 inches added to 3 meters. If we go for a vague unit, we can say that 10 in +3 m $=13$ "some units of length", but this is not helpful. Units of length can be as tiny as microns or as enormous as light-years. On the other hand, it is known that 1 inch equals precisely 2.54 centimeters; also, 1 meter equals precisely 100 centimeters. Using these facts we get:
+
+$$10 \mathrm{in}+3 \mathrm{~m}=25.4 \mathrm{~cm}+300 \mathrm{~cm}=325.4 \mathrm{~cm}$$
+
+At the expense of multiplying our original numbers with conversion factors ( 2.54 for inches and 100 for meters), we now have common unit, and addition is meaningful.
+
+A fraction should always be viewed as an amount of equal parts of a division of 1 . For example, $1 / 2$ is one half, where "one" is the amount, and "half" is the part of 1 ; $2 / 3$ is two thirds, where again "two" is the amount, and "third" the part of 1 . It's quite important to realize the different roles the numerator and the denominator play. The denominator will always have the role of the unit, while the numerator tells how much of that unit is provided.
+
+When we add or subtract fractions with the same denominator, the situation is certainly simple, as we are dealing with amounts of the same unit.
+
+\section*{Example 1.}
+$$\begin{aligned}
+& \frac{13}{5}+\frac{8}{5}=\frac{13+8}{5}=\frac{21}{5} \\
+& \frac{6}{35}-\frac{4}{35}=\frac{6-4}{35}=\frac{2}{35}
+\end{aligned}$$
+
+How about adding or subtracting two fractions, with different denominators? Different denominators will mean different units, and we need to use a trick, similar to the inches added to meters computation.
+
+A half is precisely equal to 2 quarters; 3 sixths; 4 eighths; and so on. Thus, we can always change one half to a fraction having a multiple of $\mathbf{2}$ in the denominator.
+
+$$\begin{array}{ll}
+\frac{1}{2}=\frac{1 \times 2}{2 \times 2}=\frac{2}{4} & \frac{1}{2}=\frac{1 \times 3}{2 \times 3}=\frac{3}{6} \\
+\frac{1}{2}=\frac{1 \times 4}{2 \times 4}=\frac{4}{8} & \frac{1}{2}=\frac{1 \times 5}{2 \times 5}=\frac{5}{10}
+\end{array}$$
+
+Similarly, a third equals precisely 2 sixths; 3 ninths; 4 twelfths; and so on. We get fractions whose denominator is a multiple of $\mathbf{3}$.
+
+$$\begin{array}{ll}
+\frac{2}{3}=\frac{2 \times 2}{3 \times 2}=\frac{4}{6} & \frac{2}{3}=\frac{2 \times 3}{3 \times 3}=\frac{6}{9} \\
+\frac{2}{3}=\frac{2 \times 4}{3 \times 4}=\frac{8}{12} & \frac{2}{3}=\frac{2 \times 5}{3 \times 5}=\frac{10}{15}
+\end{array}$$
+
+A quick glance tells us that sixth is common unit for both fractions.\\
+Adding $1 / 2$ and $2 / 3$ could then be interpreted as $1+2=3$ "some parts of 1 " (vague description). Alternatively - and much better! - the sum can be written as three sixths (or 3/6) added to four sixths (4/6), by using that new, common unit.
+
+$$\frac{1}{2}+\frac{2}{3}=\frac{3}{6}+\frac{4}{6}=\frac{3+4}{6}=\frac{7}{6}$$
+
+Observation: An interesting fact, often overlooked (probably since it is expected!), is that adding or subtracting fractions always results in a new fraction.
+
+Do we always have to write all the possible equivalent fractions of the given terms, to find out what the common denominator is? Actually, no - you might have noticed that $\mathbf{6}$ (from "sixth") is exactly equal to $\mathbf{2}$ times $\mathbf{3}$ ( 2 from "half" and 3 from "third"). 6 must be at the same time a multiple of 2 and of 3 , and the easiest way to obtain such a common multiple is by multiplying the two denominators.
+
+\section*{Example 2.}
+$$\begin{aligned}
+& \frac{3}{4}+\frac{5}{7}=\frac{3 \times 7}{4 \times 7}+\frac{5 \times 4}{7 \times 4}=\frac{21}{28}+\frac{20}{28}=\frac{21+20}{28}=\frac{41}{28} \\
+& \frac{3}{8}+\frac{5}{12}=\frac{3 \times 12}{8 \times 12}+\frac{5 \times 8}{12 \times 8}=\frac{36}{96}+\frac{40}{96}=\frac{36+40}{96}=\frac{76}{96}
+\end{aligned}$$
+
+In conclusion, when involving two (or, for that matter, more) fractions in additions and subtractions, a common unit is obtained by multiplying all the denominators together. Then, in order to add and/or subtract the fractions, replace the fractions with the equivalent fractions having the common denominator, at which point all fractions will have the same unit, and we only need to add or subtract the numerators, which now is meaningful.
+
+\section*{II) Least common denominator (LCD)}
+In the second example above, an interesting, and undesired, phenomenon is happening: although ninety-sixths is a common unit for eighths and twelfths, another unit is common, and much smaller. Let's check:
+
+$$\begin{array}{ll}
+\frac{3}{8}=\frac{3 \times 2}{8 \times 2}=\frac{6}{16} & \frac{3}{8}=\frac{3 \times 3}{8 \times 3}=\frac{9}{24} \\
+\frac{3}{8}=\frac{3 \times 4}{8 \times 4}=\frac{12}{32} & \frac{3}{8}=\frac{3 \times 5}{8 \times 5}=\frac{15}{40} \\
+\frac{5}{12}=\frac{5 \times 2}{12 \times 2}=\frac{10}{24} & \frac{5}{12}=\frac{5 \times 3}{12 \times 3}=\frac{15}{36} \\
+\frac{5}{12}=\frac{5 \times 4}{12 \times 4}=\frac{20}{48} & \frac{5}{12}=\frac{5 \times 5}{12 \times 5}=\frac{25}{60}
+\end{array}$$
+
+Notice that twenty-fourths (denominator 24 ) is a common unit already!
+
+$$\frac{3}{8}+\frac{5}{12}=\frac{3 \times 3}{8 \times 3}+\frac{5 \times 2}{12 \times 2}=\frac{9}{24}+\frac{10}{24}=\frac{9+10}{24}=\frac{19}{24}$$
+
+We get the same result, although at first glance it is not obvious:
+
+$$\frac{76}{96}=\frac{19 \times 4}{24 \times 4}=\frac{19}{24}$$
+
+The result we got first was correct, however it was not in lowest terms. If we want to be more efficient when adding fractions - and you will see many problems and applications requiring you to have the answer in lowest terms! - simply getting a common denominator is not enough; we need to find the smallest common denominator, which we shall call LCD=Least Common Denominator. In the example above it seems that in order to do so we have to go back to listing all the denominators! But no, we can actually devise an algorithm. We will present two such algorithms.\\
+A) The price of efficiency is investing some work first. We have to decompose the denominators into prime factors. Remember that prime numbers are those natural numbers that cannot be evenly divided by any natural number, different from 1 and themselves (exception is 1 , which has a very good reason not to be prime). The list of prime numbers includes: $2,3,5,7,11,13,17,19,23,29$.
+
+Take the number 180 . Since the number is even, it can be divided by 2 , so we can write $180=2 * 90.90$ is still even, so $90=2 * 45.45$ ends in 5 , so we can divide it by 5 , $45=5^{*} 9.9$ is divisible by 3 , so $9=3^{*} 3.3$ is prime, so we stop. Putting all these together we get:
+
+$$180=2 \times 2 \times 3 \times 3 \times 5$$
+
+\section*{Example 3.}
+For some numbers you need to attempt (and fail) the division of the given number by quite a few of the primes above. For example, take 2717 . Division by $2,3,5,7$ will not give an integer (check this!) However, we strike lucky with 11:
+
+$$2717=11 * 247$$
+
+247 will not be divisible by $2,3,5$ or 7 (otherwise 2717 would have been!), so we continue by attempting to divide by 11 (not working), 13 (which works): $247=13^{*} 19.19$ is prime, so
+
+$$2717=11 \times 13 \times 19 \text {. }$$
+
+Going back to our denominators, let us find the least common denominator for $3 / 8$ and 5/12. Start by factoring the numbers into prime numbers:
+
+$$\begin{aligned}
+& 8=2 \times 2 \times 2 \\
+& 12=2 \times 2 \times 3
+\end{aligned}$$
+
+Notice that both 8 and 12 already have a common part: $2 \times 2$; we just need to complete that existing common part to a full common multiple. What we do is simply multiply all the extra factors to the common part:
+
+$$\begin{aligned}
+& 8=\underbrace{2 \times 2} \times 2 \rightarrow \text { last } 2 \text { is extra } \\
+& 12=\overbrace{2 \times 2} \times 3 \rightarrow 3 \text { is extra } \\
+& L C D=\overbrace{2 \times 2} \times 2 \times 3=24
+\end{aligned}$$
+
+\section*{Example 4.}
+$$\begin{aligned}
+& 2100=2 \times 2 \times 3 \times 5 \times 5 \times 7 \\
+& 378=2 \times 3 \times 3 \times 3 \times 7
+\end{aligned}$$
+
+Let's figure out the common part (which involves a bit of shuffling of factors), and then complete it to the full common multiple:
+
+$$\begin{aligned}
+& 2100=\underbrace{2 \times 3 \times 7} \times 2 \times 5 \times 5 \\
+& 378=\overbrace{2 \times 3 \times 7} \times 3 \times 3 \\
+& L C D=\overbrace{2 \times 3 \times 7} \times(2 \times 5 \times 5) \times(3 \times 3)=18900
+\end{aligned}$$
+
+What to do for several denominators (three or more)? Start with two denominators, and find their least common denominator, which will now replace the original two denominators. Repeat the process with this new denominator and the third. Now all three denominators are replaced by a common one. And so on.
+
+\section*{Example 5.}
+Perform the LCD algorithm to compute:
+
+$$\frac{2}{9}+\frac{5}{12}-\frac{3}{8}$$
+
+First we need to factor out the denominators:
+
+$$9=3 \times 3 \quad 12=2 \times 2 \times 3 \quad 8=2 \times 2 \times 2$$
+
+Start with 9 and 12:
+
+$$\begin{aligned}
+& 9=\underset{\substack{\text { common } \\
+\text { common }}}{3} \times 3 \\
+& 12=\underset{3}{\stackrel{\text { comp }}{3}} \times 2 \times 2
+\end{aligned}$$
+
+The common part is 3 , and we complete it to a full common multiple:\\
+$L C D=3 \times(3) \times(2 \times 2)=36$\\
+We still need to involve 8, and we will do it now; instead of 9 and 12 we will use 36 though.
+
+For 36 and 8 we have:
+
+$$\begin{aligned}
+& 36=\underbrace{2 \times 20 m \text { non }}_{\substack{\text { common } \\
+2 \times 2}} \times 3 \times 3 \\
+& 8=2 \times 2 \times 2
+\end{aligned}$$
+
+Thus, the LCD will be obtained by completing the common part with the remaining factors:
+
+$$L C D=2 \times 2 \times(3 \times 3) \times(2)=72$$
+
+Interesting to note that we need to use two numbers at a time. In this example, if you check, there is no common part for all three numbers, however the LCD is not the product of the three numbers (which is 864; check it!)
+
+Another interesting thing is that it doesn't matter which numbers we start with, we will always get the same outcome.\\
+B) Alternatively, you can use the following algorithm (useful for smaller numbers).
+
+Let us add/subtract:
+
+$$\frac{3}{16}+\frac{7}{20}-\frac{9}{50}$$
+
+The trick here is again to find the primes that will make up the LCD. In order to do so, we must check whether a chosen prime divides (or not) at least one of the numbers. If indeed it does, it will be selected, and the denominators that can be divided by it will be divided. Repeat the procedure until we get "all ones".
+
+We will run the three denominators 16,20 and 50 through these divisions with primes. If you remember the primes list (see above) we will start with the prime 2 and see if it divides exactly into at least one of the three denominators. Then choose 3 , then 5 , then 7 , and so on.\\
+✓ Since all three numbers are even, they all divide evenly by 2 . Select 2, and perform the divisions:
+
+$$16 \div 2=8 \quad 20 \div 2=10 \quad 50 \div 2=25$$
+
+✓ Replace the original three denominators by the results of the division: 8,10 and 25\\
+✓ Since the first two are still even, both divide evenly again by 2 . Select 2, and perform the divisions that are possible (we will not divide 25 by $2!$ )
+
+$$8 \div 2=4 \quad 10 \div 2=5 \quad 25 \text { unchanged }$$
+
+✓ Replace the three numbers with the results of the divisions: 4,5 and 25\\
+✓ 4 is still even. Select 2 and perform the possible divisions (now both 5 and 25 will pass unchanged)
+
+$$4 \div 2=2 \quad 5 \text { unchanged } \quad 25 \text { unchanged }$$
+
+✓ Replace again the numbers: $2,5,25$\\
+✓ 2 is even. Select 2 and perform the (final) division by 2
+
+$$2 \div 2=1 \quad 5 \text { unchanged } \quad 25 \text { unchanged }$$
+
+✓ Replace the numbers by: 1, 5, 25\\
+✓ None of the numbers is even, we cannot divide by 2 anymore, since all numbers are odd. Skip 2\\
+✓ Check division by 3 - none divide evenly by 3. Skip 3\\
+✓ Check division by 5: both 5 and 25 work. Select 5 and perform the divisions that are possible:
+
+$$1 \text { unchanged } \quad 5 \div 5=1 \quad 25 \div 5=5$$
+
+✓ Replace the numbers by: 1, 1 and 5\\
+✓ We can divide once more by 5 . Select 5 and divide:
+
+$$1 \text { unchanged } \quad 1 \text { unchanged } \quad 5 \div 5=1$$
+
+We reached ( $1,1,1$ ), and we stop. Now put together all the numbers that were selected:
+
+$$2 \times 2 \times 2 \times 2 \times 5 \times 5=400$$
+
+This is the LCD and it will allow us to perform the addition/subtraction:
+
+$$\frac{3}{16}-\frac{7}{20}+\frac{9}{50}=\frac{3 \times 25}{16 \times 25}-\frac{7 \times 20}{20 \times 20}+\frac{9 \times 8}{50 \times 8}=\frac{75}{400}-\frac{140}{400}+\frac{72}{400}=\frac{75-140+72}{400}=\frac{7}{400}$$
+
+\section*{Example 5.}
+Add the following fractions. (We will have a twist at the end!)
+
+$$\frac{4}{35}+\frac{2}{63}+\frac{8}{45}$$
+
+✓ The denominators are 35, 63, 45. We cannot divide either number by 2 ; skip 2. However, we can divide at least one by 3 ; select 3 :
+
+$$35 \text { unchanged } \quad 63 \div 3=21 \quad 45 \div 3=15$$
+
+✓ The numbers are now 35, 21, 15. Divide again by 3; select 3:
+
+$$35 \text { unchanged } \quad 21 \div 3=7 \quad 15 \div 3=5$$
+
+✓ The numbers are now 35, 7, 5. We cannot divide again by 3; skip now 3; we can divide by 5; select 5:
+
+$$35 \div 5=7 \quad 7 \text { unchanged } \quad 5 \div 5=1$$
+
+✓ The numbers are now 7, 7, 1. None can be divided by 5 again; skip now 5. We can divide by 7; select7:
+
+$$7 \div 7=1 \quad 7 \div 7=1 \quad 1 \text { unchanged }$$
+
+We reached "all ones", so we stop. The LCD is: $3 \times 3 \times 5 \times 7=315$. We go back to our addition:
+
+$$\frac{4}{35}+\frac{2}{63}+\frac{8}{45}=\frac{4 \times 9}{35 \times 9}+\frac{2 \times 5}{63 \times 5}+\frac{8 \times 7}{45 \times 7}=\frac{36}{315}+\frac{10}{315}+\frac{56}{315}=\frac{36+10+56}{315}=\frac{102}{315}$$
+
+Even though we used the LCD, when adding or subtracting three or more fractions the result might not be in the simplest form. Above, 102 and 315 both are divisible by 3 , so we must rewrite the fraction:
+
+$$\frac{102}{315}=\frac{34 \times 3}{105 \times 3}=\frac{34}{105}$$
+
+Read the problems carefully, to see if you need to check for lowest terms answer!
+
+\section*{EXERCISES}
+Find the least common multiple of the given numbers using the LCD algorithms.
+
+\begin{enumerate}
+  \item 14,20
+  \item 12,27
+  \item $36,7,24$
+  \item $10,30,500$
+  \item $68,102,32$
+\end{enumerate}
+
+Add or subtract by bringing all fractions to the least common denominator (LCD). If necessary (that is, for three or more fractions), bring the result to the lowest terms.\\
+6. $\frac{1}{8}+\frac{1}{6}$\\
+7. $\frac{7}{24}+\frac{11}{18}$\\
+8. $\frac{7}{60}-\frac{6}{75}$\\
+9. $4 \frac{2}{5}+\frac{7}{15}$\\
+10. $\frac{1}{12}+\frac{2}{15}-\frac{3}{20}$
+
+
+\end{document}
